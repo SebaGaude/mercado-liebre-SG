@@ -1,0 +1,414 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 12px;
+    background-color: #ebebeb;
+}
+header {
+    background-color: #EAC926;
+}
+
+main {
+    margin: auto;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 47%;
+    text-align: left;
+}
+.fa-sun{
+    animation: brillo 5s infinite;
+    margin: 1%;
+}
+
+.banner-img {
+    margin-bottom: 1%;
+}
+
+
+/* intento de hacer la animacion del giro del camion. hecha una transicion para mismo efecto */
+/* @keyframes giro-camion {
+    25% { transform: rotateZ(90deg);}
+    50% { transform: rotateZ(180deg);}
+    75% { transform: rotateZ(270deg);}
+    100% { transform: rotateZ(360deg);}
+} */
+
+@keyframes bienvenida {
+    25% { opacity: 25%;}
+    50% { opacity: 50%;}
+    75% { opacity: 75%;}
+    100% {opacity: 100%;}
+
+}
+
+@keyframes brillo {
+    0% { opacity: 0%;}
+    25% {transform:rotate(50px); opacity: 100%;}
+    50% {opacity: 50%;}
+    100% {opacity: 0%;}
+}
+.navhead {
+    transition: all 0.5s;
+}
+
+.navhead:hover {
+    opacity: 50%;
+}
+.input-busqueda {
+    width: 85%;
+    border-radius: 5px;
+    border: none;
+    padding: 2%;
+    margin-right: 0%;
+}
+.barra-busqueda {
+    width: 47%;
+    margin-right: 0px;
+    
+}
+/* logo de la lupita en la barra de busqueda */
+.fa-search {
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px white;
+    padding: 1.8%;
+    margin-left: 0px;
+}
+img {
+    width: 100%;
+    text-align: center;
+}
+.encabezado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.articulo div {
+    border: solid 1px #ebebeb;
+    position: relative;
+}
+ .articulo:hover .descripciones {
+    /* display: block; */
+    height: auto;
+    width: auto;
+    opacity: 1;
+    transition: all 1s;
+} 
+.articulo:hover .camion i{
+    transform: rotate(-360deg);
+    transition: all 1s;
+}
+.articulo:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
+}
+.articulo {
+    width: 100%;
+    border: solid 1px #ebebeb;
+    margin: 0px 5px 0px 5px;
+    background-color: white;
+    margin-bottom: 3%;
+    transition: box-shadow 0.5s;
+    
+}
+
+.listado-articulos-visita, 
+.listado-articulos-oferta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.articulo div article{
+    display: flex;
+}
+
+.titulares {
+    font-size: 24px;
+    margin-left: 5%;
+    padding: 1%;
+    transition: all 1s;
+}
+
+.precios {
+    font-size: 18px;
+    margin: 0%;
+    margin-left: 2%;
+}
+
+.descuentos {
+    font-size: 16px;
+    color: #39b54a;
+    margin: 0%;
+    margin-left: 2%;
+    font-weight: 500;
+}
+
+.descripciones {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 2%;        
+    margin-top: 4%;
+    margin-bottom: 1%;
+    /* display: none;  esto no sirve para la animacion de su aparicion al hover*/
+    height: 0;
+    width: 0;
+    opacity: 0;
+   
+}
+
+
+
+footer {
+    text-align: center;
+}
+
+.cuotas-tarjeta {
+    text-align: center;
+}
+.burger-menu {
+    text-align: center;
+    padding: 20px;
+    
+}
+.burger-menu i{
+    background-color: #1259c3;;
+    color: hsl(0, 0%, 92%);
+    padding: 4px;
+    border-radius: 20%;
+}
+
+
+.site {
+    display: none;
+}
+.navegador-usuario {
+    padding-right: 3px;
+    margin-top: 5px;
+    display: none
+}
+/* camion verde en la descripcion de articulo */
+.camion{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: -15px;
+    color: #39b54a;
+}
+
+.pie-resaltado{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: left;
+}
+.pie-general i {
+    text-align: center;
+    color: #1259c3;
+    width: 2em;
+}
+.bienvenida-login {
+    text-align: center;
+}
+.bienvenida-login h3 {
+    opacity: 80%;
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: normal;
+    margin: 1%;
+    justify-content: center;
+    animation: bienvenida 2s 2;
+}
+
+.crea-formulario {
+    padding: 20px 15px;
+}
+
+.control-formulario {
+    margin-bottom: 15px;
+}
+
+.control-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: bold;
+}
+/* opciones dentro del checkbox y raddio button */
+.opciones-interes {
+    font-weight:normal;
+}
+
+.formulario {
+    padding: 5px;
+    width: 100%;
+    margin: 3px;
+}
+.validacion {
+    color: red;
+    font-style: italic;
+    margin-left: 1%;
+}
+
+/* boton para enviar el formulario de registro */
+.boton {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #EAC926;
+    color:#1259c3;
+    border: solid 2px #1259c3;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+/* boton para ingresar a la pagina de login */
+.boton-ingreso {
+    width: 100%;
+    padding: 3%;
+    margin: 4%;
+    border: none;
+    border-radius: 10px;
+    background-color: #1259c3;
+    color: #FFF;
+    font-style: normal;
+    text-align: center;
+    transition: all 0.8s;
+}
+.boton-ingreso:hover {
+background-color: #0022AA;
+}
+
+.navegador-registro {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formulario-ingreso{
+    text-align: center;
+    width: 100%;
+    
+}
+
+
+
+/* input donde se ingresan datos de ingreso */
+.ingreso {
+    width: 100%;
+    padding: 3%;
+    margin: 4%;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+/* tablets */
+@media (min-width:371px){
+    /* descripciones bloqueadas que solo surgen en el hover del articulo */
+     /* .descripciones {
+        display: block
+    }   */
+    .articulo{
+        /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+        width: 45%;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .navegador {
+        display: flex;
+        width: 100%;
+        align-content: flex-end;
+    }
+    .navegador-usuario {
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .site {
+        display: flex;
+        width: 50%;
+        align-self: flex-end;
+        
+    }
+    .navhead {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+        
+    }
+    
+}
+/* desktop */
+@media (min-width:769px){
+    .articulo{
+        width: 22%;
+    }
+    
+    .logo {
+        width: 32%;
+        text-align: left;
+        max-width: 340px;
+    }
+    
+    .input-busqueda {
+        width: 85%;
+        border-radius: 5px;
+        border: none;
+        padding: 2%;
+        margin-right: 0%;
+    }
+    .barra-busqueda {
+        width: 32%;
+        
+    }
+    .navegador {
+        font-size: 14px;
+    }
+    
+    .cuotas-tarjeta {
+        width: 32%;
+        font-size: 14px;
+    }
+    
+    .boton-ingreso{
+        max-width: 650px;
+        padding: 1%;
+        margin-top: 1%;
+    }
+    .control-ingreso input {
+        max-width: 650px;
+        padding: 1%;
+        margin: 1%;
+        
+    }
+    
+    .apartado-pie {
+        margin: 1%;
+    }
+    .pie-general {
+        display: flex;
+        text-align: center;
+        margin-top: 0%;
+    }
+    .copyright {
+        margin: 2% 1%;
+    }
+}
